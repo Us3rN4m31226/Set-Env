@@ -5,7 +5,7 @@ WHITE="\[\033[0;37m\]"
 
 if [[ $EUID -ne 0 ]]; then
 	printf "${RED}This script must be run as root.\n${WHITE}"
-	printf "${PURP}Usage: ${RED}./setup.sh [USERNAME]\n${WHITE}"
+	printf "${PURP}Usage: ${RED}sudo ./setup.sh\n${WHITE}"
 	exit
 else
 	MY_NAME=$(echo $HOME | cut -c 7-50)
