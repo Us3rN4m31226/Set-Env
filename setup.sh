@@ -10,7 +10,7 @@ if [[ $EUID -ne 0 ]]; then
 else
 	MY_NAME=$(echo $HOME | cut -c 7-50)
 	apt update 
-	apt install vim openssh-server nmap libc6-i386 -y
+	apt install vim openssh-server nmap libc6-i386 libc6-dev-i386-y
 	service ssh start
 	printf "${PURP}[+] ${RED}vim, ssh, nmap Done.\n${WHITE}"
 	apt-get update
